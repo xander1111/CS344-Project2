@@ -12,11 +12,11 @@ int print_file(int fd) {
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        int bytes_read;
-        do
+        int bytes_read = print_file(0);
+        while (bytes_read > 0)
         {
             bytes_read = print_file(0);
-        } while (bytes_read != 0);
+        } 
     }
     else {
         for (int i = 1; i < argc; i++)
