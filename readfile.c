@@ -5,7 +5,7 @@
 int main(int argc, char* argv[]) {
     if (argc < 2) {
         char error_message[] = "no filepath given\n";
-        perror(error_message);
+        write(1, error_message, 19);
         return -1;
     }
     int file = open(argv[1], O_RDONLY);
